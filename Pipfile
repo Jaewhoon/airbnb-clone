@@ -5,8 +5,12 @@ name = "pypi"
 
 [packages]
 django = "*"
+pillow = "*"
+django-countries = "*"
 
 [dev-packages]
+flake8 = "*"
+black = "*"
 
 [requires]
 python_version = "3.9"
