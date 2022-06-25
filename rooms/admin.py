@@ -75,7 +75,10 @@ class RoomAdmin(admin.ModelAdmin):
                 ),
             },
         ),
-        ("Last Details", {"fields": ("host",)}),
+        (
+            "Last Details",
+            {"fields": ("host",)},
+        ),
     )
 
     list_display = (
