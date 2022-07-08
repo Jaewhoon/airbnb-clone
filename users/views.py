@@ -32,11 +32,6 @@ class SignUpView(FormView):
     template_name = "users/signup.html"
     form_class = forms.SignUpForm
     success_url = reverse_lazy("core:home")
-    initial = {
-        "first_name": "Jaewhoon",
-        "last_name": "Cho",
-        "email": "aerospace105@gmail.com",
-    }
 
     def form_valid(self, form):
         form.save()
@@ -131,39 +126,3 @@ def github_callback(request):
             raise GithubException()
     except GithubException:
         return redirect(reverse("users:login"))
-
-
-# def kakao_login(request):
-#     client_id = os.environ.get("KAKAO_ID")
-#     redirect_uri = "http://127.0.0.1:8000/users/login/kakao/callback"
-#     return redirect(
-#         f"https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${client_id}&redirect_uri=${redirect_uri}"
-#     )
-
-
-"""
-##############################################################################################
-이유는 모르겠지만 카카오 연동이 안됨
-일단 강의에서 18단원(카카오 API 연동)은 넘어가고 19단원부터해서 끝낸 다음에
-여기로 되돌아와서 해결하기
-
-7월 5일은 19, 20까지 끝내자
-##############################################################################################
-"""
-
-
-# class KakaoException(Exception):
-#     pass
-
-
-# def kakao_callback(request):
-#     try:
-#         code = request.GET.get("code")
-#         client_id = os.environ.get("KAKAO_ID")
-#         redirect_uri = "http://127.0.0.1:8000/users/login/kakao/callback"
-#         token_request = requests.get(
-#             f"https://kauth.kakao.com/oauth/token?grant_type=authorization_code&client_id={client_id}&redirect_uri=${redirect_uri}&code={code}"
-#         )
-#         print(token_request.json())
-#     except KakaoException:
-#         return redirect(reverse("users:login"))
