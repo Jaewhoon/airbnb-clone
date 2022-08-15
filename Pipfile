@@ -12,6 +12,7 @@ django-dotenv = "*"
 requests = "*"
 psycopg2-binary = "*"
 "backports.zoneinfo" = "*"
+production = "*"
 
 [dev-packages]
 flake8 = "*"
