@@ -25,7 +25,8 @@ SECRET_KEY = "django-insecure-$6*npm^$0xax4a2p)p!e$!1m!tjfiug=g(zkv05$dbfmrk2!ug
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["airbnb-clone.eba-7isvykk5.ap-northeast-2.elasticbeanstalk.com"]
+# ALLOWED_HOSTS = ["airbnb-clone.eba-7isvykk5.ap-northeast-2.elasticbeanstalk.com"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
