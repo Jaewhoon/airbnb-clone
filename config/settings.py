@@ -20,13 +20,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-$6*npm^$0xax4a2p)p!e$!1m!tjfiug=g(zkv05$dbfmrk2!ug"
+SECRET_KEY = os.environ.get(
+    "SECRET_KEY", "django-insecure-$6*npm^$0xax4a2p)p!e$!1m!tjfiug=g(zkv05$dbfmrk2!ug"
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = int(os.environ.get("DEBUG", 1))
+
+if os.environ.get("DJANGO_ALLOWED_HOSTS"):
+    ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
+else:
+    ALLOWED_HOSTS = []
 
 # ALLOWED_HOSTS = ["airbnb-clone.eba-7isvykk5.ap-northeast-2.elasticbeanstalk.com"]
-ALLOWED_HOSTS = ["*"]
+# ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
