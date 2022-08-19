@@ -13,10 +13,11 @@ Django==4.1
 django-countries==7.3.2
 django-dotenv==1.4.2
 django-seed==0.3.1
-Faker==14.0.0
+Faker==14.1.0
 filelock==3.7.1
 flake8==5.0.4
 future==0.16.0
+gunicorn==20.1.0
 idna==3.3
 jmespath==0.10.0
 mccabe==0.7.0
@@ -28,6 +29,7 @@ pipenv==2022.8.5
 pipenv-to-requirements==0.9.0
 platformdirs==2.5.2
 production==0.0.0.0.0.0a0.dev20210120
+psycopg2==2.9.3
 psycopg2-binary==2.9.3
 pycodestyle==2.9.1
 pyflakes==2.5.0

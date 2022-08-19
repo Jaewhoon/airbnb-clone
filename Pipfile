@@ -13,6 +13,8 @@ requests = "*"
 psycopg2-binary = "*"
 "backports.zoneinfo" = "*"
 production = "*"
+psycopg2 = "*"
+gunicorn = "*"
 
 [dev-packages]
 flake8 = "*"

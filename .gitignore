@@ -162,6 +162,8 @@ cython_debug/
 # My Project
 uploads/
 node_modules/
+.env.prod
+.env.prod.db
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*

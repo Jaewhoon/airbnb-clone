@@ -15,6 +15,7 @@ Faker==14.0.0
 filelock==3.7.1
 flake8==5.0.4
 future==0.16.0
+gunicorn==20.1.0
 jmespath==0.10.0
 mccabe==0.7.0
 mypy-extensions==0.4.3
@@ -25,6 +26,7 @@ pipenv==2022.8.5
 pipenv-to-requirements==0.9.0
 platformdirs==2.5.2
 production==0.0.0.0.0.0a0.dev20210120
+psycopg2==2.9.3
 psycopg2-binary==2.9.3
 pycodestyle==2.9.1
 pyflakes==2.5.0
